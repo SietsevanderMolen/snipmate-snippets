@@ -6,16 +6,31 @@ snippet asu
 
 ## Packages
 snippet package
-	package ${1:name} is
+	package ${1:nameme} is
 	   --  Fill me in
-	end ${1:name}
+	end ${1:nameme}
 snippet packagebody
-	package body ${1:name} is
+	package body ${1:nameme} is
+	   null;
 	   --  Fill me in
-	end ${1:name}
+	end ${1:nameme}
 snippet proc
-	procedure ${1:name}
+	procedure ${1:nameme}
 	is
 	begin
+	   null;
 	   --  Fill me in
-	end ${1:name}
+	end ${1:nameme}
+
+## Control
+snippet for
+	for I in Integer range ${1:1} .. ${1:10} loop
+		null;
+	end loop;
+snippet case
+	case ${1:X} is
+	   when ${2:1} =>
+	      null; --  Do something
+	   when others =>
+	      null; --  Handle me
+	end case;
